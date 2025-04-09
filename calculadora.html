@@ -6,32 +6,52 @@
     <script src="jquery.js"></script>
     <script>
         $(document).ready(function(){ 
-        btn_um.onclick = function () {$("#campo").val("1");}
-        btn_dois.onclick = function () { $("#campo").val("2"); }
-        btn_tres.onclick = function () { $("#campo").val("3"); }
-        btn_adicao.onclick = function () { $("#campo").val("+"); }
-        btn_porcentagem.onclick = function () { $("#campo").val("%"); }
 
-        btn_quatro.onclick = function () { $("#campo").val("4"); }
-        btn_cinco.onclick = function () { $("#campo").val("5"); }
-        btn_seis.onclick = function () { $("#campo").val("6"); }
-        btn_subtracao.onclick = function () { $("#campo").val("-"); }
-        btn_potencia.onclick = function () { $("#campo").val("*"); }
+        let operacao;
+        let total;
+        let um;
+        let dois;
+        let tres;
+        let quatro;
+        let cinco;
+        let seis;
+        let sete;
+        let oito;
+        let nove;
+        let zero;
+        let soma;
+        let subtracao;
+        let divisao;
+        let multiplicacao;
+        let potencia;
+        let porcentagem;
 
-        btn_sete.onclick = function () { $("#campo").val("7"); }
-        btn_oito.onclick = function () { $("#campo").val("8"); }
-        btn_nove.onclick = function () { $("#campo").val("9");}
-        btn_divisao.onclick = function () { $("#campo").val("/"); }
-        btn_pa.onclick = function () { $("#campo").val("("); }
+        btn_um.onclick = function () { $("#campo").val("1"); um = 1;}
+        btn_dois.onclick = function () { $("#campo").val("2"); dois = 2;}
+        btn_tres.onclick = function () { $("#campo").val("3"); tres = 3;}
+        btn_adicao.onclick = function () { $("#campo").val("+"); operacao = "a";}
+        btn_porcentagem.onclick = function () { $("#campo").val("%"); porcentagem = "por";}
 
-        btn_ponto.onclick = function () { $("#campo").val("."); }
-        btn_zero.onclick = function () { $("#campo").val("0"); }
-        btn_virgula.onclick = function () { $("#campo").val(","); }
-        btn_multiplicacao.onclick = function () { $("#campo").val("*"); }
-        btn_pf.onclick = function () { $("#campo").val(")"); }
+        btn_quatro.onclick = function () { $("#campo").val("4"); quatro = 4;}
+        btn_cinco.onclick = function () { $("#campo").val("5"); cinco = 5;}
+        btn_seis.onclick = function () { $("#campo").val("6"); seis = 6;}
+        btn_subtracao.onclick = function () { $("#campo").val("-"); operacao = "s";}
+        btn_potencia.onclick = function () { $("#campo").val("*"); operacao = "pot";}
 
-        btn_igual.onclick = function () { $("#campo").val("="); }
-        btn_reiniciar.onclick = function () { $("#campo").val("r"); }
+        btn_sete.onclick = function () { $("#campo").val("7"); sete = 7;}
+        btn_oito.onclick = function () { $("#campo").val("8"); oito = 8;}
+        btn_nove.onclick = function () { $("#campo").val("9"); nove = 9;}
+        btn_divisao.onclick = function () { $("#campo").val("/"); operacao = "d";}
+        btn_pa.onclick = function () { $("#campo").val("("); operacao = "paa";}
+
+        btn_ponto.onclick = function () { $("#campo").val("."); operacao = "pon";}
+        btn_zero.onclick = function () { $("#campo").val("0"); zero = 0;}
+        btn_virgula.onclick = function () { $("#campo").val(","); operacao = "v";}
+        btn_multiplicacao.onclick = function () { $("#campo").val("*"); operacao = "m";}
+        btn_pf.onclick = function () { $("#campo").val(")"); operacao = "paf";}
+
+        btn_igual.onclick = function () { $("#campo").val("="); operacao = "i";}
+        btn_reiniciar.onclick = function () { $("#campo").val("r"); operacao = "rei";}
     });
     </script>
 </head>
@@ -39,7 +59,7 @@
 <body>
     <fieldset>
         <legend>CALCULADORA</legend>
-        <imput type="number" id="campo">
+        <input type="number" id="campo">
             </br></br>
             <button id="btn_um">1</button>
             <button id="btn_dois">2</button>
